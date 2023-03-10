@@ -1,0 +1,425 @@
+@font-face {
+  font-family: "ocra";
+  src: url(fonts/OCRAEXT.TTF);
+}
+@font-face {
+  font-family: "DOSS";
+  src: url(fonts/ModernDOS9x16.ttf),
+}
+@font-face {
+  font-family: "Arame";
+  src: url(/fonts/Arame-Regular.ttf);
+}
+@font-face {
+  font-family: 'Fixedsys';
+  src: url(fonts/Fixedsys.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: "Fixedsys";
+  font-size: 1em;
+  min-width: 700px;
+}
+
+/* PAGES */
+
+#home {
+  position: relative;
+  background-size: cover;
+  background-image: url(/images/castle.jpg);
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+/* HEADER */
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.contact {
+  animation: slideInDown 1.5s ease-in 0.5s 1 normal both;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 60px;
+  background-color: #265429a1;
+}
+.contact .lSide, .contact .rSide {
+  display: flex;
+  gap: 70px;
+}
+.contact img {
+  transition: transform 0.3s ease;
+  width: 30px;
+}
+.contact img:hover {
+  transform: translateY(-5px);
+}
+
+/* NAVIGATION BAR */
+.nav {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin-top: 50px;
+}
+.nav .lSide{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.nav .rSide {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.nav img {
+  width: 150px;
+}
+.nav .logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.nav .logo h1 {
+  font-size: 40px;
+  color: #06fd16;
+  text-shadow: 3px 3px 1px #2f4b31;
+  margin-top: -40px;
+}
+.nav .logo p {
+  font-size: 20px;
+  color: #2f4b31;
+  text-shadow: 2px 2px 2px #87cc8c;
+}
+.logo .glassbg {
+  height: 25px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.15);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.589);
+  backdrop-filter: blur(10px);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav a {
+  padding: 0.1em 0.25em;
+  width: 12em;
+  font-size: 10px;
+  font-weight: 100;
+  text-decoration: none;
+  color: black;
+}
+
+.nav a span {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0.4em;
+  width: 7.55em;
+  height: 2.5em;
+  background-color: #5b895e;
+  font-size: 1.5em;
+  color: #fff;
+  border: 0.08em solid #fff;
+  box-shadow: 0 0.4em 0.1em 0.019em #fff;
+}
+
+.nav a span:active {
+  transition: all 0.2s;
+  transform: translate(0, 0.4em);
+  box-shadow: 0 0 0 0 #fff;
+}
+
+.nav a span:not(hover) {
+  transition: all 0.2s;
+}
+
+#home .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 100px;
+  letter-spacing: 10px;
+  margin-top: 80px;
+}
+
+#home .content span{
+  color: #2ef110;
+  text-shadow: 3px 3px 3px #2f4b31 ;
+  font-size: 50px;
+}
+
+/* WHO I AM */
+
+#whoiam {
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(images/hd.jpeg);
+  background-color: #000;
+  background-attachment: fixed;
+  color: white;
+}
+#headerWhoIAm{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+#whoiam .part1{
+  padding: 40px;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+}
+#whoiam .part1 p span{
+  color: rgb(52, 189, 52);
+  font-size: 30px;
+}
+
+#whoiam .part1 h2{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  text-align: end;
+}
+#whoiam .part1 h3{
+  margin-top: 10px;
+}
+#whoiam .part1 img{
+  width: 30px;
+}
+#whoiam .part2{
+  padding: 20px;
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+}
+#whoiam .part3{
+  padding: 40px;
+  width: 40vw;
+}
+#whoiam .part3 p span:first-of-type{
+  font-family: 'Arame';
+  color: rgb(0, 255, 242);
+  text-shadow: 1px 0 1px black;
+}
+#whoiam .part3 p span:nth-of-type(2){
+  font-family: 'Arame';
+  color: rgb(238, 255, 0);
+  text-shadow: 1px 0 1px black;
+}
+#whoiam .part3 p span:nth-of-type(3){
+  font-family: 'Arame';
+  color: rgb(9, 255, 0);
+  text-shadow: 1px 0 1px black;
+}
+
+#whoiam .content {
+  display: flex;
+  justify-content: space-around;
+}
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+ul li:first-of-type {
+  margin-top: 10px;
+}
+#whoiam .skills ul li , #whoiam .uniqueSkills ul li{
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+#whoiam ul li:hover {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+i {
+  font-size: 2em;
+  margin-right: 10px;
+}
+i:hover {
+  color: white;
+}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-500px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+#whoiam .skills {
+  animation: slideInLeft 1.5s ease-in 0.5s 1 normal both;
+  padding: 20px;
+  background-color: #87cc8c;
+  
+  max-width: 310px;
+  max-height: max-content;
+  font-family: 'fixedsys';
+
+  transition: all 0.5s;
+  padding: 1ch 2ch;
+  background-color: #034045;
+  color: #000;
+  font-family: 'DOSS';
+  border-radius: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 
+    -2px -2px 0px hsl(120, 100%, 90%),
+    -4px -4px 0px hsl(120, 90%, 80%),
+    -8px -8px 0px hsl(120, 70%, 60%),
+    -12px -12px 0px hsl(120, 50%, 40%),
+    -16px -16px 0px hsl(120, 30%, 20%),
+    -18px -18px 0px hsla(120, 10%, 10%, 0.432);
+}
+
+#whoiam .skills:hover {
+  background-color: rgb(65, 225, 120);
+  color: #fff;
+  box-shadow: 0px 0px 30px white;
+}
+
+#whoiam .uniqueSkills {
+  font-family: 'OCRA';
+  padding: 1ch 2ch;
+  max-width: 310px;
+  max-height: fit-content;
+
+  overflow: hidden;
+  overflow-wrap: normal;
+  background-color: #034045;
+  box-shadow: 20px 20px 50px rgba(34, 34, 34, 0.5);
+  border-radius: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+#whoiam .uniqueSkills:hover {
+  background-color: rgb(236, 193, 0);
+  color: #fff;
+}
+#whoiam .uniqueSkills .content{
+  opacity: 0;
+  transition: 0.5s;
+  transform: translateY(100px);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+#whoiam .uniqueSkills:hover .content{
+  opacity: 1;
+  transform: translateY(0px);
+}
+.skills ul span{
+  font-size: 1.7em;
+}
+
+.uniqueSkills ul span{
+  font-size: 1.7em;
+}
+
+/* O que eu faço */
+
+#whatIDo{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  background: url(images/galaxy.PNG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+
+  position: relative;
+  color: white;
+}
+
+.card1, .card3 {
+ background-color: rgba(192, 40, 184, 0.11);
+ box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+ border-top: 1px solid rgba(255, 255, 255, 0.5);
+ border-right: 1px solid rgba(255, 255, 255, 0.5);
+ border-radius: 0px 15px 15px 0px;
+ overflow: hidden;
+ backdrop-filter: blur(4px);
+ padding: 15px;
+}
+.card2 {
+  background-color: rgba(84, 48, 241, 0.11);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 15px 0px 0px 15px;
+  overflow: hidden;
+  backdrop-filter: blur(4px);
+  padding: 15px;
+}
+
+
+#whatIDo .card1{
+
+  width: 40%;
+  height: 30%;
+
+  position: absolute;
+  left: 0;
+  top: 5%
+}
+
+#whatIDo .card2{
+
+  width: 40%;
+  height: 30%;
+
+  position: absolute;
+  right: 0;
+  top: 37%
+}
+
+#whatIDo .card3{
+
+  width: 40%;
+  height: 30%;
+
+  position: absolute;
+  left: 0;
+  top: 69%
+}
+
+#portfolio {
+  height: 100vh;
+}
+
+#faleConosco {
+  height: 100vh;
+}
